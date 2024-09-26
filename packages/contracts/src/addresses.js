@@ -7,7 +7,29 @@ export const KOVAN_ID = 42;
 export const MAINNET_ID = 1;
 export const RINKEBY_ID = 4;
 export const ROPSTEN_ID = 3;
+export const VITRA_ID = 350;
 
+const commonContracts = {
+  factory: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f", // Substitua pelos contratos da VITRA, se for diferente
+  router01: "0xf164fC0Ec4E93095b804a4795bBe1e041497b92a", // Substitua se necessário
+  router02: "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D", // Substitua se necessário
+};
+
+export default {
+  [VITRA_ID]: {
+    pairs: {
+      "VITRA-WETH": "0x...", // Adicione os endereços corretos do par VITRA-WETH
+      "VITRA-USDC": "0x...", // Adicione outros pares que você tiver
+    },
+    tokens: {
+      VITRA: "0x...", // Endereço do token VITRA
+      WETH: "0x...",  // Endereço do token WETH na VITRA, caso haja
+      USDC: "0x...",  // Endereço do token USDC na VITRA, caso haja
+    },
+    ...commonContracts,
+  },
+  // Outras redes existentes
+};
 const commonContracts = {
   factory: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f",
   router01: "0xf164fC0Ec4E93095b804a4795bBe1e041497b92a",
