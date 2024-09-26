@@ -7,11 +7,12 @@ export const KOVAN_ID = 42;
 export const MAINNET_ID = 1;
 export const RINKEBY_ID = 4;
 export const ROPSTEN_ID = 3;
+export const VITRA_ID = 350; // ID da rede VITRA
 
 const commonContracts = {
-  factory: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f",
-  router01: "0xf164fC0Ec4E93095b804a4795bBe1e041497b92a",
-  router02: "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+  factory: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f", // Atualize com o contrato correto para VITRA, se necessário
+  router01: "0xf164fC0Ec4E93095b804a4795bBe1e041497b92a", // Atualize com o contrato correto para VITRA, se necessário
+  router02: "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D", // Atualize com o contrato correto para VITRA, se necessário
 };
 
 export default {
@@ -80,6 +81,18 @@ export default {
     tokens: {
       DAI: "0xaD6D458402F60fD3Bd25163575031ACDce07538D",
       WETH: "0xc778417E063141139Fce010982780140Aa0cD5Ab",
+    },
+    ...commonContracts,
+  },
+  [VITRA_ID]: { // Configuração para a rede VITRA
+    pairs: {
+      // Adicione aqui os pares de tokens específicos da rede VITRA
+      "VITRA-WETH": "0xYourVitraWETHPairAddressHere", // Exemplo, atualize com o endereço real
+    },
+    tokens: {
+      // Adicione aqui os tokens específicos da rede VITRA
+      VITRA: "0xYourVitraTokenAddressHere", // Exemplo, atualize com o endereço real
+      WETH: "0xYourWethAddressHere", // Exemplo, atualize com o endereço real
     },
     ...commonContracts,
   },
