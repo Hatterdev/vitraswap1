@@ -30,7 +30,7 @@ export default {
   },
   // Outras redes existentes
 };
-export default {
+export {
   [GOERLI_ID]: {
     pairs: {
       "DAI-WETH": "0x8F609d85ebC64316B0B2f9E53c11b4e48B7A06d2",
